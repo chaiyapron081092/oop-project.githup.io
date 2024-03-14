@@ -9,5 +9,5 @@ application description: rrRandom
 
 presentation:link[https://www.canva.com/design/DAF_gLYnquQ/OdiJajHhUuaWngjA1I_XWA/edit?utm_content=DAF_gLYnquQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton]
 
-vedio:link[]
+vedio:link[https://www.capcut.com/t/Zs86Mt2eK/]
 
