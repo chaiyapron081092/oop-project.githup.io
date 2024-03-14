@@ -8,7 +8,7 @@ class Rrrandomnumber:
     def timex():
         Rrrandomnumber.time = st.number_input("จำนวนครั้งที่สุ่ม", value=1)
 
-    @staticmethod
+    
     def randomx(numbermin, numbermax):
         if isinstance(numbermin, int) and isinstance(numbermax, int):
             if numbermin <= numbermax:
@@ -28,7 +28,6 @@ class Rrrandomlanguage(Rrrandomnumber):
     def __init__(self, time=1):
         super().__init__(time)
 
-    @staticmethod
     def randomx(language):
         if isinstance(language, str):
             if language == "thai":
@@ -52,7 +51,6 @@ class Rrrandomx(Rrrandomlanguage):
     def __init__(self, time=1):
         super().__init__(time)
 
-    @staticmethod
     def randomx(txt):
         if isinstance(txt, str):
             items = txt.split(",")
@@ -68,10 +66,7 @@ def main():
     st.write("")
     st.write("")
     
-    option = st.selectbox(
-        "เลือกประเภท:",
-        ("Random ตัวเลข", "Random เเบบหมวดหมู่","Random เเบบเพิ่มเอง")
-    )
+    option = st.selectbox("เลือกประเภท:",("Random ตัวเลข", "Random เเบบหมวดหมู่","Random เเบบเพิ่มเอง"))
 
     if option == "Random ตัวเลข":
         min_value = st.number_input("ค่าเริ่มต้น", value=0)  
@@ -100,9 +95,8 @@ def main():
         txt = st.text_area("เพิ่มสิ่งที่ต้องการสุ่ม คั่นด้วย ','")
         Rrrandomnumber.timex()
         if st.button("สุ่มม!!!"):
-            Rrrandomx.randomx(txt)
+            for u in range(Rrrandomnumber.time):
+                Rrrandomx.randomx(txt)
 
-if __name__ == "__main__":
-    main()
 
 
